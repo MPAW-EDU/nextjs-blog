@@ -11,9 +11,8 @@ export default function BlogPage({title,date,content}) {
       </Head>
 
       <main>
-        <h1>
-          {title}
-        </h1>
+        <h1>{title}</h1>
+        <p>{content}</p>
       </main>
 
     </div>
@@ -21,7 +20,7 @@ export default function BlogPage({title,date,content}) {
 }
 
 export async function getStaticProps(context) {
-    console.log(context);
+    // console.log(context);
     const { params } = context;
     return {
         props: blogPosts.find(item => item.slug === params.slug),
