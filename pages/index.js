@@ -24,13 +24,13 @@ export default function Home() {
 
 function BlogListItem({slug,title,date,content}) {
   return (
-    <div className="border border-black-400 shadow rounded p-4">
+    <div className="border border-gray-100 shadow hover:shadow-md hover:border-gray-200 rounded-md p-4 transition duration-200 ease-in">
       <div>
         <Link href={`/blog/${slug}`}>
           <a className="font-bold">{title}</a>
         </Link>
       </div>
-      <div>{format(parseISO(date), 'MMM do, uuu')}</div>
+      <div className="text-gray-600 text-xs">{format(parseISO(date), 'MMM do, uuu')}</div>
       <div>{content}</div>
     </div>
   )
