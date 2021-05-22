@@ -30,7 +30,7 @@ function BlogListItem({slug,title,date,content}) {
           <a className="font-bold">{title}</a>
         </Link>
       </div>
-      <div>{date}</div>
+      <div>{format(parseISO(date), 'MMM do, uuu')}</div>
       <div>{content}</div>
     </div>
   )
